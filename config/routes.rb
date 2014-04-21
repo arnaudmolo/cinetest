@@ -1,5 +1,11 @@
-Rails.application.routes.draw do
-  devise_for :users
+# Rails.application.routes.draw do
+#
+#   authenticate :user do
+#     root :to => 'home#index'
+#   end
+#   root :to => 'home#index'
+
+#  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -54,4 +60,16 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+# end
+
+Cinetest::Application.routes.draw do
+
+  authenticated :user do
+    root :to => 'home#index', as: :authenticate_route
+  end
+  unauthenticated do
+    root :to => 'home#index'
+  end
+
+  devise_for :users
 end
