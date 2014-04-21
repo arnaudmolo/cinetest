@@ -4,6 +4,5 @@
 <%= "Environment: #{Rails.env}" %>
 
 <% @users.each do |user| %>
-  couc
-  <p>User: <%= link_to user.name, user %></p>
+  <p>User <%= user.name %>: <%= link_to user.name, user %></p>
 <% end %>

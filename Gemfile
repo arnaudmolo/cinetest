@@ -41,7 +41,7 @@ gem 'capybara', :group => :test
 gem 'figaro', '>= 0.5.3'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -50,5 +50,5 @@ gem 'figaro', '>= 0.5.3'
 # gem 'capistrano-rails', group: :development
 
 # Use debugger
-# gem 'debugger', group: [:development, :test]
+gem 'debugger', group: [:development, :test]
 

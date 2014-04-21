@@ -1,4 +1,5 @@
 # Rails.application.routes.draw do
+
 #
 #   authenticate :user do
 #     root :to => 'home#index'
@@ -64,6 +65,9 @@
 
 Cinetest::Application.routes.draw do
 
+  get 'users/index'
+  get 'users/show'
+
   authenticated :user do
     root :to => 'home#index', as: :authenticate_route
   end
@@ -72,4 +76,5 @@ Cinetest::Application.routes.draw do
   end
 
   devise_for :users
+  resources :users
 end
