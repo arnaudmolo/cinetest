@@ -32,9 +32,13 @@ gem 'database_cleaner', :group => :test
 gem 'email_spec', :group => :test
 
 gem 'devise'
+gem 'protected_attributes'
+
 
 gem 'cucumber-rails', :group => :test, :require => false
 gem 'capybara', :group => :test
+
+gem 'figaro', '>= 0.5.3'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -29,5 +29,8 @@ module Cinetest
       g.javascripts = false
       g.helper = false
     end
+
+    config.filter_parameters += [:password, :password_confirmation]
+
   end
 end
